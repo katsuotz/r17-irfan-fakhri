@@ -110,6 +110,8 @@
 
                 if (lastSegment && lastSegment !== 'test-candidate') {
                     method.value = 'PUT'
+                } else {
+                    method.value = 'POST'
                 }
             }
         })
