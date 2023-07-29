@@ -84,7 +84,7 @@ class TestCandidateController extends Controller
                 'alamat' => $request->alamat,
             ]);
 
-            return redirect('/')->with('success', 'Data has been updated!');
+            return redirect()->back()->with('success', 'Data has been updated!');
         } catch (\Exception $exception) {
             return redirect('/')->with('error', 'Oops! Something went wrong. Please try again later');
         }
@@ -98,7 +98,7 @@ class TestCandidateController extends Controller
         try {
             $testCandidate->delete();
 
-            return redirect('/')->with('success', 'Data has been deleted!');
+            return redirect()->back()->with('success', 'Data has been deleted!');
         } catch (\Exception $exception) {
             return redirect('/')->with('error', 'Oops! Something went wrong. Please try again later');
         }
