@@ -1,0 +1,13 @@
+html, body {
+    background-color: #F0F5F9;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+:root,
+[data-bs-theme=light] {
+    --bs-body-font-family: figtree, Arial, sans-serif;
+}

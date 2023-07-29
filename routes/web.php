@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestCandidateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [TestCandidateController::class, 'index']);
+Route::resource('/test-candidate', TestCandidateController::class);
+Route::post('/test-candidate/import', [TestCandidateController::class, 'import'])->name('test-candidate.import');
