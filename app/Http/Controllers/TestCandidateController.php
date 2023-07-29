@@ -118,6 +118,8 @@ class TestCandidateController extends Controller
             return redirect('/')->with('success', 'Data import successful!');
         } catch (\Exception $exception) {
             return redirect('/')->with('error', 'Oops! Something went wrong. Please try again later');
+        } catch (\Error $error) {
+            return redirect('/')->with('error', 'Oops! Something went wrong. Please try again later');
         }
     }
 }
