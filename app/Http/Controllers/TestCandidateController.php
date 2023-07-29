@@ -20,6 +20,8 @@ class TestCandidateController extends Controller
         if ($search)
             $candidates = $candidates->where('nama', 'like', '%' . $search . '%');
 
+        $candidates = $candidates->orderBy('nama', 'asc');
+
         return view('home', [
             'candidates' => $candidates->get(),
             'search' => $search,
